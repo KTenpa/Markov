@@ -1,6 +1,4 @@
 /** Command-line tool to generate Markov text. */
-
-
 const fs = require("fs");
 const markov = require("./markov");
 const axios = require("axios");
@@ -8,7 +6,6 @@ const process = require("process");
 
 
 /** Make Markov machine from text and generate text from it. */
-
 function generateText(text) {
   let mm = new markov.MarkovMachine(text);
   console.log(mm.makeText());
@@ -16,7 +13,6 @@ function generateText(text) {
 
 
 /** read file and generate text from it. */
-
 function makeText(path) {
   fs.readFile(path, "utf8", function cb(err, data) {
     if (err) {
@@ -31,8 +27,6 @@ function makeText(path) {
 
 
 /** read URL and make text from it. */
-
-
 async function makeURLText(url) {
   let resp;
 
@@ -47,7 +41,6 @@ async function makeURLText(url) {
 
 
 /** interpret cmdline to decide what to do. */
-
 let [method, path] = process.argv.slice(2);
 
 if (method === "file") {
