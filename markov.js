@@ -35,3 +35,7 @@ class MarkovMachine {
     return out.join(" ");
   }
 }
+
+module.exports = {
+  MarkovMachine,
+};
